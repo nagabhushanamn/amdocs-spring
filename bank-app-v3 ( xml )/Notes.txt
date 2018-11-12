@@ -1,0 +1,30 @@
+
+
+
+Spring - Init phase
+-----------------------
+
+
+- load bean defintions
+- BFPP
+
+- for every bean defintion
+
+	- instance get create
+	- dependency injection
+	- BPP : before init
+	- init
+	- BPP : after init
+
+
+
+
+
+
+
+
+
+
+
+
+
