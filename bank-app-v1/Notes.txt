@@ -1,0 +1,55 @@
+
+
+
+bank-app
+----------
+
+use-case : txr(amount,from,to)
+
+
+step-1: Model ( business data )
+
+	- Account
+	
+step-2: data/repository layer ==> persisting logic
+
+	- JdbcAccountRepository	
+	
+step-3: service layer ==> processing logic
+
+	- TxrServiceImpl
+	
+	
+	
+--------------------------------------------------------
+OO concepts
+--------------------------------------------------------		
+
+
+1. Interface / Abstraction
+2. Implementation/ Enpsulation
+3. Inheritance
+4. Polymophism
+
+---------------------------------------------------------- 
+
+--------------------------------------------------------
+OO Principles
+--------------------------------------------------------	
+
+S.O.L.I.D. STANDS FOR:
+
+S — Single responsibility principle
+O — Open closed principle
+L — Liskov substitution principle
+I — Interface segregation principle
+D — Dependency Inversion principle	
+
+
+
+
+
+
+
+
+
