@@ -34,7 +34,7 @@ public class JdbcAccountRepository implements AccountRepository {
 			public Account mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Account account = new Account();
 				account.setNum(rs.getString(1));
-				account.setBalance(rs.getDouble(3));
+				account.setBalance(rs.getDouble(2));
 				return account;
 			}
 		}, num);

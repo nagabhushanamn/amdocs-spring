@@ -20,6 +20,14 @@
 	</build>
 
 	<dependencies>
+
+		<!-- H2 DB -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.187</version>
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -61,8 +69,8 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>5.1.2.RELEASE</version>
 		</dependency>
-		
-		
+
+
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 		<dependency>
 			<groupId>log4j</groupId>
