@@ -21,28 +21,28 @@ public class DbConfig {
 	@Autowired
 	private Environment env;
 
-//	@Bean
-//	public DataSource dataSource() {
-//		BasicDataSource basicDataSource = new BasicDataSource();
-//		basicDataSource.setDriverClassName(env.getProperty("db.driver"));
-//		basicDataSource.setUrl(env.getProperty("db.url"));
-//		basicDataSource.setUsername(env.getProperty("db.user"));
-//		basicDataSource.setPassword(env.getProperty("db.password"));
-//		return basicDataSource;
-//	}
-	
 	@Bean
 	public DataSource dataSource() {
-		
-		// no need shutdown, EmbeddedDatabaseFactoryBean will take care of this
-		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-		EmbeddedDatabase db = builder
-			.setType(EmbeddedDatabaseType.H2) //.H2 or .DERBY
-			.addScript("create-db.sql")
-			.addScript("insert-data.sql")
-			.build();
-		return db;
+		BasicDataSource basicDataSource = new BasicDataSource();
+		basicDataSource.setDriverClassName(env.getProperty("db.driver"));
+		basicDataSource.setUrl(env.getProperty("db.url"));
+		basicDataSource.setUsername(env.getProperty("db.user"));
+		basicDataSource.setPassword(env.getProperty("db.password"));
+		return basicDataSource;
 	}
+	
+//	@Bean
+//	public DataSource dataSource() {
+//		
+//		// no need shutdown, EmbeddedDatabaseFactoryBean will take care of this
+//		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
+//		EmbeddedDatabase db = builder
+//			.setType(EmbeddedDatabaseType.H2) //.H2 or .DERBY
+//			.addScript("create-db.sql")
+//			.addScript("insert-data.sql")
+//			.build();
+//		return db;
+//	}
 
 
 	@Bean

@@ -6,8 +6,9 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -15,9 +16,10 @@ import org.springframework.stereotype.Repository;
 import com.bank.model.Account;
 
 @Repository
+@Qualifier("jdbc")
 public class JdbcAccountRepository implements AccountRepository {
 
-	private static Logger logger = Logger.getLogger("bank");
+//	private static Logger logger = Logger.getLogger("bank");
 
 	private JdbcTemplate jdbcTemplate;
 
@@ -27,7 +29,7 @@ public class JdbcAccountRepository implements AccountRepository {
 	}
 
 	public Account loadAccount(String num) {
-		logger.info("loading account " + num);
+//		logger.info("loading account " + num);
 		String sql = "select * from my_bank.ACCOUNTS where num=?";
 		Account account = jdbcTemplate.queryForObject(sql, new RowMapper<Account>() {
 			@Override
@@ -42,7 +44,7 @@ public class JdbcAccountRepository implements AccountRepository {
 	}
 
 	public void updateAccount(Account account) {
-		logger.info("updating account ");
+//		logger.info("updating account ");
 		String sql = "update my_bank.ACCOUNTS set balance=? where num=?";
 		jdbcTemplate.update(sql, account.getBalance(), account.getNum());
 	}

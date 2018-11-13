@@ -1,5 +1,72 @@
 
 
 
-  spring + data-access
-  --------------------
+jdbc-api  - limitations
+--------------------------
+
+
+-> too much code for sipmle db operation
+-> association b.w tables need to to manage manually
+-> many/join for complex operations
+-> data-access code partially depends on DBMS products
+-> cache for frequently accesing data
+-> dynamic queries are difficult
+...
+
+
+Soln:
+
+
+ORM ( Object Relational Mapping ) frameworks
+---------------------------------------------
+
+
+s/w product  ==> application + datasource
+
+
+
+		application ==> processing logic
+		datasource  ==> persisting logic
+				
+				
+		application  ==> object model
+		datasource   ==> relational model
+
+
+
+	1. hibernate 
+	2. Eclipselink
+	3. Toplink
+	4. iBatis
+	5. JDO
+	..
+	
+	
+	
+	JPA ==> official ORM spec
+	
+-----------------------------------------------
+
+
+how to use ORM F.W
+--------------------
+
+step-1 :
+
+	-> object-model  <---> relational-model
+	
+step-2 :
+
+	-> do crud operations using JPA 	
+
+
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
