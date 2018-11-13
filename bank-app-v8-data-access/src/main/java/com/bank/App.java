@@ -1,5 +1,6 @@
 package com.bank;
 
+
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -29,9 +30,6 @@ public class App {
 		System.out.println();
 		txrService.txr(100.00, "1", "2");
 		System.out.println();
-//		txrService.txr(100.00, "2", "1");
-//		System.out.println();
-
 		System.out.println("----------------------------------");
 
 		// --------------------------------
@@ -39,7 +37,6 @@ public class App {
 		// ---------------------------------
 
 		context.close();
-		
 
 	}
 

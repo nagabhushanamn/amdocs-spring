@@ -1,0 +1,32 @@
+
+
+How to map http-request to handler in spring MVC?
+
+  
+  - by URL
+  - by HTTP Method
+  - by presence/absence request-header
+  - by presence/absence request-params
+  - by request/response  ContentType
+  
+  
+  //---------------------------------------------
+  
+  
+  possible params to request-handler
+  
+  
+  	- @RequestParam
+  	- @RequestParam
+  	- @CookieValue
+  	- @ModelAttribute
+  	- BindingResult
+  	- HttpServletRequest
+  	- HttpServletResponse
+  	- HttpServletSession
+  	- Locale
+  	- Principal
+  	- Model
+  	- Map
+  	- @RequestBody
+  	
