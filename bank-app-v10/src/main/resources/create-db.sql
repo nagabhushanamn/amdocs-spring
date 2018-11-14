@@ -7,3 +7,10 @@ create table my_bank.ACCOUNTS(
 	type vrachr(20)
 );
 
+create table my_bank.TXNS(
+	id int primary key,
+	amount double,
+	txn_date date,
+	type varchar(20),
+	acc_num varchar(12) references my_bank.ACCOUNTS.num
+)
