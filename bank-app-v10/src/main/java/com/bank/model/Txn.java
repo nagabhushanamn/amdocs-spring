@@ -1,14 +1,37 @@
 package com.bank.model;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name = "TXNS", schema = "my_bank")
 public class Txn {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private double amount;
-	private LocalDateTime localDateTime;
+	@Column(name = "txn_date")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date date;
+	@Enumerated(EnumType.STRING)
 	private TxnType type;
 
+	@ManyToOne
+	@JoinColumn(name = "acc_num")
 	private Account account;
 
 	public int getId() {
@@ -27,12 +50,12 @@ public class Txn {
 		this.amount = amount;
 	}
 
-	public LocalDateTime getLocalDateTime() {
-		return localDateTime;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setLocalDateTime(LocalDateTime localDateTime) {
-		this.localDateTime = localDateTime;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public TxnType getType() {
@@ -42,8 +65,6 @@ public class Txn {
 	public void setType(TxnType type) {
 		this.type = type;
 	}
-	
-	
 
 	public Account getAccount() {
 		return account;
@@ -55,7 +76,7 @@ public class Txn {
 
 	@Override
 	public String toString() {
-		return "Txn [id=" + id + ", amount=" + amount + ", localDateTime=" + localDateTime + ", type=" + type + "]";
+		return "Txn [id=" + id + ", amount=" + amount + ", date=" + date + ", type=" + type + "]";
 	}
 
 }
