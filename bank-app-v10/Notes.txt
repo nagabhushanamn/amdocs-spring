@@ -1,0 +1,54 @@
+
+
+
+bank-app
+------------
+
+-------------------------------------------------------------------
+
+A. model / business data
+
+    - Customer
+	- Account
+	- Txn
+	........
+	
+-------------------------------------------------------------------
+	
+B. Layer(s)
+
+	a. Repository/Data Layer	 ==> persisting logic
+	
+		- AccountRepository
+		- TxnRepository
+		..
+		
+		technology
+		----------
+		
+			- JDBC
+			- ORM
+			- spring-data
+			
+
+     b. Business/Service Layer   ==> processing logic
+     
+     	- TxrService
+     	
+		technology
+		----------
+		
+		- your choice
+     	
+     c. Web layer                ==> request/response logic			
+     
+     	- TxrController
+     	
+     	
+     	technology
+		----------
+		
+		- spring MVC
+		
+ -------------------------------------------------------------------    	
+     	
