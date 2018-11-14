@@ -29,6 +29,7 @@ public class JPAConfig {
 		Properties props = new Properties();
 		props.setProperty("hibernate.show_sql", "true");
 		props.setProperty("hibernate.format_sql", "true");
+		//props.setProperty("hibernate.hbm2ddl.auto", "create");
 		entityManagerFactoryBean.setJpaProperties(props);
 		return entityManagerFactoryBean;
 	}
