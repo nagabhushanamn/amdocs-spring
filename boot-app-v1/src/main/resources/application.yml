@@ -1,0 +1,10 @@
+#debug: false
+#
+#spring:
+#  autoconfigure:
+#    exclude:
+#    - org.springframework.boot.autoconfigure.websocket.servlet.WebSocketMessagingAutoConfiguration
+#    
+#
+#server:
+#  port: 8282    
