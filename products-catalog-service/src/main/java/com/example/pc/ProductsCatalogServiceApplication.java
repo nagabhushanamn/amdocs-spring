@@ -17,15 +17,15 @@ public class ProductsCatalogServiceApplication {
 		SpringApplication.run(ProductsCatalogServiceApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner test(ProductRepository productRepository) {
-
-		return args -> {
-			List<Product> products = productRepository.findAll();
-			System.out.println(products.size());
-			products.forEach(System.out::println);
-		};
-
-	}
+//	@Bean
+//	public CommandLineRunner test(ProductRepository productRepository) {
+//
+//		return args -> {
+//			List<Product> products = productRepository.findAll();
+//			System.out.println(products.size());
+//			products.forEach(System.out::println);
+//		};
+//
+//	}
 
 }

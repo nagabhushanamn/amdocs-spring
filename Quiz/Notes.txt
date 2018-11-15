@@ -1,0 +1,96 @@
+
+
+Condition condition = new Condition() {
+			@Override
+			public boolean test(FoodItem item) {
+				return item.getPrice() == price;
+			}
+		};
+		
+		
+		
+Condition condition=public boolean test(FoodItem item) {
+				return item.getPrice() == price;
+			}	
+			
+			
+			|
+			|
+			|
+			V
+			
+		
+		
+Condition condition= boolean test(FoodItem item) {
+				return item.getPrice() == price;
+			}		
+			
+			|
+			|
+			|
+			V
+			
+			
+			
+		
+Condition condition= test(FoodItem item) {
+				return item.getPrice() == price;
+			}		
+			
+			
+	
+			|
+			|
+			|
+			V
+			
+			
+		
+Condition condition= (FoodItem item) {
+				return item.getPrice() == price;
+			}		
+					
+			
+			
+			|
+			|
+			|
+			V		
+	
+	
+	
+Condition condition= (item) {
+				return item.getPrice() == price;
+			}					
+			
+			
+					
+			
+			|
+			|
+			|
+			V				
+			
+			
+			
+	
+	
+Condition condition= item -> {
+				return item.getPrice() == price;
+			}					
+			
+			
+					
+			
+			|
+			|
+			|
+			V	
+			
+			
+	
+	
+Condition condition= item -> item.getPrice() == price;
+							
+			
+			

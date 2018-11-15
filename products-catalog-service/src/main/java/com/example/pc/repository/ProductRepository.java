@@ -1,10 +1,10 @@
 package com.example.pc.repository;
 
-import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.repository.MongoRepository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.pc.model.Product;
 
-public interface ProductRepository extends MongoRepository<Product, ObjectId>{
+public interface ProductRepository extends JpaRepository<Product, String>{
 
 }
